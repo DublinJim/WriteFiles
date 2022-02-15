@@ -1,5 +1,8 @@
 package com.example.writefiles;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
@@ -17,6 +20,8 @@ public class HelloController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        FileTools.writeFiles();
+
         Text text1 = new Text("Now this is a text node ");
         Text text2 = new Text(" Also a new thing ");
         text1.setFont(Font.font("verdana"));
@@ -24,4 +29,6 @@ public class HelloController implements Initializable {
         text1.setFill(Color.CORAL);
         txtFlow.getChildren().addAll(text1, text2);
     }
+
+
 }
